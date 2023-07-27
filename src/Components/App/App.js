@@ -52,9 +52,9 @@ class App extends React.Component {
       ]
     };
     this.addTrack = this.addTrack.bind(this);
+    this.removeTrack = this.removeTrack.bind(this);
   }
 
-  
   addTrack(track) {
     let tracks = this.state.playlistTracks;
     if (!tracks.find(trackIndex => trackIndex.id === track.id)) {
@@ -63,13 +63,10 @@ class App extends React.Component {
     }
   }
 
-/*
-  addTrack(track) {
-    const foundTrack = this.state.playlistTracks.find((playlistTrack) => playlistTrack.id === track.id);
-    const newTrack = this.state.playlistTracks.concat(track);
-    foundTrack ? console.log('Track already exists in playlist.') : this.setState({ playlistTracks: newTrack });
+  removeTrack(track) {
+    let updatedPlaylist = this.state.playlistTracks.filter(playlistTrack => playlistTrack.id !== track.id);
+    this.setState({ playlistTracks: updatedPlaylist });
   }
-*/
 
   render() {
     return (
@@ -89,7 +86,10 @@ class App extends React.Component {
             <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
 
             {/*  <!-- Add a Playlist component --> */}
-            <Playlist playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks}/>
+            <Playlist
+              playlistName={this.state.playlistName}
+              playlistTracks={this.state.playlistTracks}
+              onRemove={this.removeTrack}/>
           </div>
         </div>
       </div>
