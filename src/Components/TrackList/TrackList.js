@@ -4,13 +4,18 @@ import './TrackList.css';
 
 export class TrackList extends React.Component {
     render() {
-        return(
+        return (
             <div className='TrackList'>
-            {/* <!-- Add map method that renders Track components --> */}
-            {this.props.tracks.map(song => {
-                return <Track key={song.id} track={song}/>
-
-            })}
+                {/* <!-- Add map method that renders Track components --> */}
+                {this.props.tracks.map(song => {
+                    return (
+                        <Track
+                            key={song.id}
+                            track={song}
+                            onAdd={this.props.onAdd}
+                        />
+                    );
+                })};
             </div>
         );
     }

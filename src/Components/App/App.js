@@ -54,14 +54,22 @@ class App extends React.Component {
     this.addTrack = this.addTrack.bind(this);
   }
 
+  
   addTrack(track) {
     let tracks = this.state.playlistTracks;
-    // If track is not found in the tracks array
     if (!tracks.find(trackIndex => trackIndex.id === track.id)) {
       tracks.push(track);
       this.setState({playlistTracks: tracks});
     }
   }
+
+/*
+  addTrack(track) {
+    const foundTrack = this.state.playlistTracks.find((playlistTrack) => playlistTrack.id === track.id);
+    const newTrack = this.state.playlistTracks.concat(track);
+    foundTrack ? console.log('Track already exists in playlist.') : this.setState({ playlistTracks: newTrack });
+  }
+*/
 
   render() {
     return (
