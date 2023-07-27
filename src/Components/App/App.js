@@ -5,6 +5,11 @@ import { SearchResults } from '../SearchResults/SearchResults';
 import { Playlist } from '../Playlist/Playlist';
 
 class App extends React.Component {
+  // Add constructor & pull in props from React.Component class
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <div>
