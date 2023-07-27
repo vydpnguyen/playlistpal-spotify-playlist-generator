@@ -8,8 +8,8 @@ class App extends React.Component {
   // Add constructor & pull in props from React.Component class
   constructor(props) {
     super(props);
-    // Set initial state of component with a SearchResults array
-    this.state = {SearchResults: [
+    // Set initial state of component with a searchResults array
+    this.state = {searchResults: [
       {
         name: 'universe',
         artist: 'thuy',
@@ -45,7 +45,7 @@ class App extends React.Component {
           <SearchBar />
           <div className="App-playlist">
             {/*  <!-- Add a SearchResults component --> */}
-            <SearchResults />
+            <SearchResults searchResults={this.state.searchResults} />
             {/*  <!-- Add a Playlist component --> */}
             <Playlist />
           </div>
