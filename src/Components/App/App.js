@@ -11,22 +11,25 @@ class App extends React.Component {
     // Set initial state of component with a searchResults array
     this.state = {searchResults: [
       {
-        name: 'universe',
-        artist: 'thuy',
-        album: 'universe',
-        id: 1
+        name: 'song 1',
+        artist: 'artist 1',
+        album: 'album 1',
+        id: 1,
+        photo: '/public/background_photo.png'
       },
       {
-        name: 'Glue Song',
-        artist: 'beabadoobee',
-        album: 'Glue Song',
-        id: 2
+        name: 'song 2',
+        artist: 'artist 2',
+        album: 'album 2',
+        id: 2,
+        photo: '/public/gluesong-bea.png'
       },
       {
-        name: 'LIMBO',
-        artist: 'keshi',
-        album: 'GABRIEL',
-        id: 3
+        name: 'song 3',
+        artist: 'artist 3',
+        album: 'album 3',
+        id: 3,
+        photo: '/public/limbo-keshi.png'
       }
     ]};
   }
