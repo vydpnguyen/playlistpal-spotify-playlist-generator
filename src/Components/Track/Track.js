@@ -14,6 +14,7 @@ export class Track extends React.Component {
     render() {
         return(
             <div className='Track'>
+                <div className='Track-cover'></div>
                 <div className='Track-information'>
                     {/* <!-- Add track name --> */}
                     <h3>{this.props.track.name}</h3>

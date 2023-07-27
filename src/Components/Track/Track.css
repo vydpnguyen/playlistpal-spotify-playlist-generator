@@ -2,10 +2,19 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #133C7C;
-    padding: 0 2rem;
+    padding: 1rem 2rem;
+}
+
+.Track-cover {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 7px;
 }
 
 .Track-information {
+    padding-left: 1rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
