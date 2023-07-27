@@ -13,6 +13,13 @@
   }
 }
 
+.App-playlist {
+  display: flex;
+  flex-direction: row;
+  margin: 0 10rem;
+  justify-content: space-between;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

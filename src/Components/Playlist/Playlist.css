@@ -1,0 +1,84 @@
+/*  
+TODO: fix button to be at the bottom of div
+*/
+
+.Playlist {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    width: 500px;
+    height: 750px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+    background: linear-gradient(142deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.30) 100%);
+    box-shadow: 0px 4px 40px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    overflow-y: scroll;
+    margin-bottom: 5rem;
+}
+
+.Playlist input {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #A9A9A9;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 0.4rem;
+    box-sizing: border-box;
+}
+
+.Playlist input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #133C7C;
+    font-family: Poppins;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    border-bottom: 1px solid #6f6f6f;
+}
+  
+.Playlist-save {
+    width: 135px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 70px;
+    background: #133C7C;
+    outline: none;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 38rem;
+}
+  
+.Playlist-save:hover {
+    background-color: #0C2853;
+}
+  
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+  
+@media only screen and (max-width: 1020px) {
+    .Playlist {
+      width: 100%;
+    }
+}
+  
+@media only screen and (max-width: 375px) {
+    .Playlist input {
+      font-size: .99rem;
+    }
+}
