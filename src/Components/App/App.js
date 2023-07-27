@@ -8,6 +8,27 @@ class App extends React.Component {
   // Add constructor & pull in props from React.Component class
   constructor(props) {
     super(props);
+    // Set initial state of component with a SearchResults array
+    this.state = {SearchResults: [
+      {
+        name: 'universe',
+        artist: 'thuy',
+        album: 'universe',
+        id: 1
+      },
+      {
+        name: 'Glue Song',
+        artist: 'beabadoobee',
+        album: 'Glue Song',
+        id: 2
+      },
+      {
+        name: 'LIMBO',
+        artist: 'keshi',
+        album: 'GABRIEL',
+        id: 3
+      }
+    ]};
   }
 
   render() {
