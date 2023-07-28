@@ -1,3 +1,23 @@
+# PlaylistPal Spotify Playlist Generator
+
+This is an interactive React application that allows users to search for Spotify library, create a custom playlist, then save it to their Spotify account.
+
+# Features
+
+* Spotify Login: When a user searches for a song, album, or artist for the first time, they will be prompted to log in or create a new account on Spotify.
+
+* Search by Song, Album, or Artist: Users can  find their desired music by entering the name of a song, artist, or album into the search bar and clicking the Search button. The app then retrieves relevant song data from the extensive Spotify library.
+
+* Populate Results List: PlaylistPal displays a list of tracks that match the user's search query.
+
+* Add Song to a Custom Playlist: Users can create a personalized playlist by simply click the + sign next to a track to add it to their playlist.
+
+* Remove Song from Custom Playlist: Users can remove a track from their playlist y by selecting the - sign next to the track.
+
+* Change Playlist Title: PlaylistPal allows users to change the playlist title by typing in the New Playlist field.
+
+* Save Playlist to Account: Users can save their curated playlists to their Spotify account with a single click using the "Save Playlist" button.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
