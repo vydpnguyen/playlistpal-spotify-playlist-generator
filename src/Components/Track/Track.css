@@ -61,3 +61,22 @@
     line-height: 20px;
     padding-top: 2px;
 }
+
+@media only screen and (max-width: 700px) {
+    .Track-cover {
+        width: 60px;
+        height: 60px
+    }
+
+    .Track-information {
+        padding-left: 1.2rem;
+    }
+
+    .Track-information h3 {
+        font-size: 0.9rem;
+    }
+
+    .Track-information p {
+        font-size: 0.8rem;
+    }
+}

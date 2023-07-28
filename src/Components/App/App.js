@@ -133,7 +133,7 @@ class App extends React.Component {
             />
           </div>
         </div>
-        <div className='Footer'>Copyright © 2023 All rights reserved | Website developed by Vy Nguyen</div>
+        <div className='Footer'>Copyright © 2023 All rights reserved<br />Website created by Vy Nguyen</div>
       </div>
     );
   }
