@@ -55,6 +55,7 @@ class App extends React.Component {
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
+    this.search = this.search.bind(this);
   }
 
   addTrack(track) {
@@ -80,6 +81,10 @@ class App extends React.Component {
     // Pass trackURIs and playlistName to a method that will save user's playlist to their account
   }
 
+  search(searchTerm) {
+    console.log(searchTerm);
+  }
+
   render() {
     return (
       <div>
@@ -91,7 +96,7 @@ class App extends React.Component {
         </h3>
         <div className="App">
           {/*  <!-- Add a SearchBar component --> */}
-          <SearchBar />
+          <SearchBar onSearch={this.search} />
 
           <div className="App-playlist">
             {/*  <!-- Add a SearchResults component --> */}
