@@ -106,12 +106,15 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>
-          Playlist<span className="highlight">Pal</span>
-        </h1>
-        <h3>
-          Create a custom playlist saved to your Spotify account.
-        </h3>
+        <div className='App-header'>
+          <div className='App-logo'>
+            Playlist<span className="highlight">Pal</span>
+          </div>
+          <div className='Spotify'>
+            <div>Made for</div>
+            <img src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png' alt='Spotify logo'/>
+          </div>
+        </div>
         <div className="App">
           {/*  <!-- Add a SearchBar component --> */}
           <SearchBar onSearch={this.search} />
@@ -130,6 +133,7 @@ class App extends React.Component {
             />
           </div>
         </div>
+        <div className='Footer'>Copyright © 2023 All rights reserved | Website developed by Vy Nguyen</div>
       </div>
     );
   }
