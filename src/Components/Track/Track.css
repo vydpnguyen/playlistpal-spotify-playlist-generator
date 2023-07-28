@@ -2,14 +2,13 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #133C7C;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 .Track-cover {
     display: flex;
     width: 70px;
     height: 70px;
-    background-color: white;
     border-radius: 7px;
 }
 
@@ -42,7 +41,7 @@
     margin-bottom: 0.22rem;
     color: #133C7C;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 600;
     line-height: 10px;
@@ -57,6 +56,6 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
-    line-height: 10px;
+    line-height: 20px;
     padding-top: 2px;
 }

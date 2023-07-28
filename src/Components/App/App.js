@@ -3,6 +3,7 @@ import './App.css';
 import { SearchBar } from '../SearchBar/SearchBar';
 import { SearchResults } from '../SearchResults/SearchResults';
 import { Playlist } from '../Playlist/Playlist';
+import Spotify from '../../util/Spotify';
 
 class App extends React.Component {
   // Add constructor & pull in props from React.Component class
@@ -16,21 +17,21 @@ class App extends React.Component {
           artist: 'artist 1',
           album: 'album 1',
           id: 1,
-          photo: '/public/background_photo.png'
+          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
         },
         {
           name: 'song 2',
           artist: 'artist 2',
           album: 'album 2',
           id: 2,
-          photo: '/public/background_photo.png'
+          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
         },
         {
           name: 'song 3',
           artist: 'artist 3',
           album: 'album 3',
           id: 3,
-          photo: '/public/background_photo.png'
+          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
         }
       ],
       playlistName: 'example playlist name',
@@ -40,14 +41,14 @@ class App extends React.Component {
           artist: 'playlist artist 4',
           album: 'playlist album 4',
           id: 4,
-          photo: '/public/background_photo.png'
+          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
         },
         {
           name: 'playlist track 5',
           artist: 'playlist artist 5',
           album: 'playlist album 5',
           id: 5,
-          photo: '/public/background_photo.png'
+          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
         }
       ]
     };
@@ -82,6 +83,10 @@ class App extends React.Component {
   }
 
   search(searchTerm) {
+    Spotify.search(searchTerm)
+      .then(results => {
+        this.setState({ searchResults: results });
+      })
     console.log(searchTerm);
   }
 
