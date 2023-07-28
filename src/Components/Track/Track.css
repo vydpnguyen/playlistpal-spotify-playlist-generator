@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid #133C7C;
-    padding: 0.5rem 2rem;
+    padding: 0.6rem 2rem;
 }
 
 .Track-cover {
@@ -38,17 +38,18 @@
 
 .Track-information h3 {
     text-align: left;
-    margin-bottom: 0.22rem;
+    margin-bottom: 0.1rem;
     color: #133C7C;
     font-family: Poppins;
-    font-size: 17px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 10px;
+    line-height: 20px;
     padding-top: 15px;
 }
 
 .Track-information p {
+    margin-top: 0.1rem;
     text-align: left;
     color: rgba(256, 256, 256, 0.8);
     color: #133C7C;

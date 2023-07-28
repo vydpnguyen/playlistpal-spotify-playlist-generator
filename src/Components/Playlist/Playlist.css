@@ -66,6 +66,11 @@ TODO: fix button to be at the bottom of div
     background-color: #0C2853;
 }
   
+
+input::placeholder {
+    color: #A9A9A9;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;

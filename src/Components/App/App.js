@@ -11,50 +11,14 @@ class App extends React.Component {
     super(props);
     // Set initial state of component with a searchResults array
     this.state = {
-      searchResults: [
-        {
-          name: 'song 1',
-          artist: 'artist 1',
-          album: 'album 1',
-          id: 1,
-          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
-        },
-        {
-          name: 'song 2',
-          artist: 'artist 2',
-          album: 'album 2',
-          id: 2,
-          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
-        },
-        {
-          name: 'song 3',
-          artist: 'artist 3',
-          album: 'album 3',
-          id: 3,
-          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
-        }
-      ],
-      playlistName: 'example playlist name',
-      playlistTracks: [
-        {
-          name: 'playlist track 4',
-          artist: 'playlist artist 4',
-          album: 'playlist album 4',
-          id: 4,
-          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
-        },
-        {
-          name: 'playlist track 5',
-          artist: 'playlist artist 5',
-          album: 'playlist album 5',
-          id: 5,
-          image: 'https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228'
-        }
-      ]
+      searchResults: [],
+      playlistName: 'New Playlist',
+      playlistTracks: []
     };
     this.addTrack = this.addTrack.bind(this);
     this.removeTrack = this.removeTrack.bind(this);
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
+    this.savePlaylistName = this.savePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
   }
@@ -63,7 +27,7 @@ class App extends React.Component {
     let tracks = this.state.playlistTracks;
     if (!tracks.find(trackIndex => trackIndex.id === track.id)) {
       tracks.push(track);
-      this.setState({playlistTracks: tracks});
+      this.setState({ playlistTracks: tracks });
     }
   }
 
@@ -90,6 +54,55 @@ class App extends React.Component {
     console.log(searchTerm);
   }
 
+  savePlaylistName(name, trackURIs) {
+    if (!name || !trackURIs) {
+      return;
+    }
+    let accessToken = Spotify.getAccessToken();
+    const headers = { Authorization: `Bearer ${accessToken}` };
+    let userID = '';
+
+    // 1. GET current user's ID
+    // Make request to return user's Spotify username
+    return fetch('https://api.spotify.com/v1/me', {
+      headers: headers
+    })
+      .then(response => response.json())
+
+      // 2. POST a new playlist with name to their account. Receive the playlist ID back from request
+      .then(jsonResponse => {
+        userID = jsonResponse.id;
+        return fetch(`https://api.spotify.com/v1/users/${userID}/playlists`, {
+          headers: headers,
+          method: 'POST',
+          body: JSON.stringify({ name: name })
+        })
+          .then(response => response.json())
+          // 3. POST track URIs to the newly-created playlist, referencing user's account and new playlist
+          .then(jsonResponse => {
+            const playlistID = jsonResponse.id;
+            return fetch(`https://api.spotify.com/v1/playlists/${playlistID}/tracks`, {
+              headers: headers,
+              method: 'POST',
+              body: JSON.stringify({ uris: trackURIs })
+            });
+          });
+      });
+  }
+
+  savePlaylist() {
+    const trackURIs = this.state.playlistTracks.map((track) => track.uri);
+    const name = this.state.playlistName;
+    this.savePlaylistName(name, trackURIs).then(() => {
+      // Reset playlist name
+      this.setState({
+        playlistName: 'New Playlist',
+        playlistTracks: []
+      });
+      //document.getElementById('Playlist-name').value = this.state.playlistName;
+    });
+  }
+
   render() {
     return (
       <div>
@@ -105,7 +118,7 @@ class App extends React.Component {
 
           <div className="App-playlist">
             {/*  <!-- Add a SearchResults component --> */}
-            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack}/>
+            <SearchResults searchResults={this.state.searchResults} onAdd={this.addTrack} />
 
             {/*  <!-- Add a Playlist component --> */}
             <Playlist
@@ -114,7 +127,7 @@ class App extends React.Component {
               onRemove={this.removeTrack}
               onNameChange={this.updatePlaylistName}
               onSave={this.savePlaylist}
-              />
+            />
           </div>
         </div>
       </div>
