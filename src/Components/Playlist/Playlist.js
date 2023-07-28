@@ -15,12 +15,14 @@ export class Playlist extends React.Component {
     render() {
         return(
             <div className='Playlist'>
+                <div className='Playlist-name'>
                 <input
                     id='Playlist-name'
                     placeholder='New Playlist'
                     onChange={this.handleNameChange}
                     value={this.props.playlistName}
                     />
+                </div>
                 {/* <!-- Add TrackList Component-->*/}
                 <TrackList
                     tracks={this.props.playlistTracks}

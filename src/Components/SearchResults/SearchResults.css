@@ -1,6 +1,5 @@
 .SearchResults {
     display: inline-block;
-    max-width: 100%;
     width: 500px;
     height: 750px;
     flex-shrink: 0;
@@ -13,7 +12,7 @@
     margin-bottom: 5rem;
 }
 
-h2 {
+.Results {
     color: #133C7C;
     font-family: Poppins;
     font-size: 25px;
@@ -22,8 +21,7 @@ h2 {
     line-height: normal;
     color: #133C7C;
     text-align: left;
-    padding-left: 2rem;
-    margin-bottom: 0.2rem;
+    padding: 1.2rem 0 1rem 2rem;
 }
   
 ::-webkit-scrollbar {
@@ -31,9 +29,6 @@ h2 {
     background: transparent;
 }
   
-@media only screen and (max-width: 1020px) {
-    .SearchResults {
-      width: 100%;
-      margin-bottom: 2rem;
-    }
+@media only screen and (max-width: 768) {
+
 }
