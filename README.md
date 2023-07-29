@@ -5,9 +5,8 @@ An interactive React application that allows users to search for Spotify library
 
 <em>This project idea is derived from the Codecademy Full Stack career path.</em>
 
-![PlaylistPal Main Screen](https://imgur.com/a/kbIb0K1)
-
-![Playlist saved to Spotify](https://imgur.com/a/EgTywDd)
+![PlaylistPal Main Screen](images/playlistpal-1.png)
+![Playlist saved to Spotify](images/playlistpal-2.png)
 
 ## Features
 
