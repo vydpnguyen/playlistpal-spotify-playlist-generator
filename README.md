@@ -1,8 +1,15 @@
 # PlaylistPal Spotify Playlist Generator
 
-This is an interactive React application that allows users to search for Spotify library, create a custom playlist, then save it to their Spotify account.
+## About
+An interactive React application that allows users to search for Spotify library, create a custom playlist, then save it to their Spotify account. Requires users to have a Spotify account for playlists to be saved.
 
-# Features
+<em>This project idea is derived from the Codecademy Full Stack career path.</em>
+
+![PlaylistPal Main Screen](https://imgur.com/a/kbIb0K1)
+
+![Playlist saved to Spotify](https://imgur.com/a/EgTywDd)
+
+## Features
 
 * Spotify Login: When a user searches for a song, album, or artist for the first time, they will be prompted to log in or create a new account on Spotify.
 
