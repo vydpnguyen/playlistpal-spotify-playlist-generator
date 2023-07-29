@@ -30,12 +30,13 @@ html {
 .Spotify div {
   color: #FFF;
   font-family: Poppins;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   margin-right: 0.4rem;
-  margin-top: 0.09rem;
+  margin-top: 0.1rem;
+  white-space: nowrap
 }
 
 .Spotify img {
@@ -50,6 +51,8 @@ html {
 body {
   background-image: url('/public/background_photo.png');
   background-size: cover;
+  background-attachment: fixed;
+
 }
 
 .App-logo {
@@ -116,7 +119,7 @@ body {
   }
 
   .Spotify div {
-    font-size: 0.87rem;
+    font-size: 0.9rem;
   }
 
   .Spotify img {
