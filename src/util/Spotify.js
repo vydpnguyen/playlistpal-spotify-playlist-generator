@@ -1,6 +1,7 @@
 let accessToken = '';
 const clientID = '78677958579b4304bdb7f846edca381d';
-const redirectURI = 'http://localhost:3000/';
+//const redirectURI = 'http://localhost:3000/';
+const redirectURI = 'https://playlistpal.netlify.app';
 const Spotify = {
     // Check if user's access token is already set & return value saved to access token
     getAccessToken() {
