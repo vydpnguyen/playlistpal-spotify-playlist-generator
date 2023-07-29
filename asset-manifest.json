@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/playlistpal-spotify-playlist-generator/static/css/main.2e1357b4.css",
+    "main.js": "/playlistpal-spotify-playlist-generator/static/js/main.9ceae603.js",
+    "static/js/787.60afd59b.chunk.js": "/playlistpal-spotify-playlist-generator/static/js/787.60afd59b.chunk.js",
+    "static/media/background_photo.png": "/playlistpal-spotify-playlist-generator/static/media/background_photo.dc6fef470d042d38f91f.png",
+    "index.html": "/playlistpal-spotify-playlist-generator/index.html",
+    "main.2e1357b4.css.map": "/playlistpal-spotify-playlist-generator/static/css/main.2e1357b4.css.map",
+    "main.9ceae603.js.map": "/playlistpal-spotify-playlist-generator/static/js/main.9ceae603.js.map",
+    "787.60afd59b.chunk.js.map": "/playlistpal-spotify-playlist-generator/static/js/787.60afd59b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e1357b4.css",
+    "static/js/main.9ceae603.js"
+  ]
+}
