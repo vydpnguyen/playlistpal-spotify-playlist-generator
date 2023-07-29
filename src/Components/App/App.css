@@ -18,13 +18,13 @@ html {
   display: flex;
   justify-content: space-between;
   height: 5.3rem;
+  padding: 0 10.2rem;
 }
 
 .Spotify {
   margin-top: 2.5rem;
   display: flex;
   text-align: right;
-  padding-right: 10.2rem;
 }
 
 .Spotify div {
@@ -53,7 +53,6 @@ body {
 }
 
 .App-logo {
-  padding-left: 10.2rem;
   text-align: left;
   color: #FFF;
   font-family: Poppins, sans-serif;
