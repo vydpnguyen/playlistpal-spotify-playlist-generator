@@ -80,9 +80,14 @@
     .Track-information p {
         font-size: 0.8rem;
     }
+    
+    .Track-action {
+        font-size: 1.5rem;
+        text-align: left;
+    }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 400px) {
     .Track {
         padding: 0.1rem 0rem;
         margin: 0rem 1.5rem;
