@@ -83,7 +83,7 @@
     
     .Track-action {
         font-size: 1.5rem;
-        text-align: left;
+        text-align: right;
     }
 }
 
@@ -99,7 +99,7 @@
     }
 
     .Track-information {
-        padding-left: 0.5rem;
+        padding-left: 1rem;
     }
 
     .Track-information h3 {
@@ -113,6 +113,6 @@
 
     .Track-action {
         font-size: 1.5rem;
-        text-align: left;
+        text-align: right;
     }
 }
