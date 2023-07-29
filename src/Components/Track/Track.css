@@ -31,6 +31,7 @@
     background-color: rgba(0, 0, 0, 0);
     color: #133C7C;
     font-weight: 300;
+    text-align: left;
 }
 
 .Track-action:hover {
@@ -78,5 +79,35 @@
 
     .Track-information p {
         font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .Track {
+        padding: 0.1rem 0rem;
+        margin: 0rem 1.5rem;
+    }
+
+    .Track-cover {
+        width: 40px;
+        height: 40px
+    }
+
+    .Track-information {
+        padding-left: 0.5rem;
+    }
+
+    .Track-information h3 {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+
+    .Track-information p {
+        font-size: 0.7rem;
+    }
+
+    .Track-action {
+        font-size: 1.5rem;
+        text-align: left;
     }
 }

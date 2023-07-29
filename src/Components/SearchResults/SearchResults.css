@@ -39,3 +39,11 @@
         padding-bottom: 0rem;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    .Results {
+        text-align: center;
+        padding: 1.2rem 0 0 0rem;
+    }
+
+}
