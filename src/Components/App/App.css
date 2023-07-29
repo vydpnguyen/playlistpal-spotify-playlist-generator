@@ -84,6 +84,7 @@ body {
   padding-bottom: 2rem;
 }
 
+
 @media only screen and (max-width: 1150px) {
   .App-playlist {
     flex-direction: column;
@@ -91,6 +92,7 @@ body {
     margin: 2rem 2rem;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   .App-header {
