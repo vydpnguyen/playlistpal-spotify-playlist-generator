@@ -30,7 +30,7 @@ html {
 .Spotify div {
   color: #FFF;
   font-family: Poppins;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -39,7 +39,7 @@ html {
 }
 
 .Spotify img {
-  height: 2rem;
+  height: 1.9rem;
   flex-shrink: 0;
 }
 
@@ -93,7 +93,6 @@ body {
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   .App-header {
     flex-direction: column;
@@ -118,17 +117,17 @@ body {
   }
 
   .Spotify div {
-    font-size: 0.97rem;
+    font-size: 0.87rem;
   }
 
   .Spotify img {
-    height: 1.6rem;
+    height: 1.5rem;
   }
 
   .App-playlist {
     flex-direction: column;
     align-items: center;
-    margin: 2rem 2rem;
+    margin: 2rem 3rem;
   }
 
 }
