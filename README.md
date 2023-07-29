@@ -1,5 +1,8 @@
 # PlaylistPal Spotify Playlist Generator
 
+## Live Demo
+https://playlistpal.netlify.app/
+
 ## About
 An interactive React application that allows users to search for Spotify library, create a custom playlist, then save it to their Spotify account. Requires users to have a Spotify account for playlists to be saved.
 
